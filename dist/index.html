@@ -1,9 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Webpack App</title>
-  </head>
-  <body>
-  <script type="text/javascript" src="main.bundle.js"></script></body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        AngularJS Seed Project
+    </title>
+<link href="main.css" rel="stylesheet"></head>
+
+<body ng-app="app">
+    <nav class="navbar sticky-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">AngularJS Seed Project</a>
+    </nav>
+
+    <div class="container">        
+        <ng-view class="container"></ng-view>
+    </div>
+<script type="text/javascript" src="main.bundle.js"></script></body>
+
 </html>
