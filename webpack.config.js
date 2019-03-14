@@ -8,8 +8,6 @@ module.exports = {
     entry: './app/index.js',
     devtool: 'inline-source-map',
     devServer: {
-        //useLocalIp: true,
-        host: '10.10.10.236',
         port: 8081,
         contentBase: './dist',
         overlay: true,
