@@ -12,8 +12,24 @@
 </head>
 
 <body ng-app="app">
+<style>
+    ul li a { color: #ffffff } 
+    #nav-logo { padding: 15px; }    
+</style>
     <nav class="navbar sticky-top navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Anime Tracker | TVDB </a>
+        <a class="navbar-brand" id="nav-logo"  href="#">Anime Tracker | TVDB </a>
+        <ul class="nav navbar-nav" >
+            <li data-match-route="/$"><a href="/">Home</a></li>
+            <li data-match-route="/add"><a href="/add">Add</a></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
+            <li data-match-route="/login"><a href="/login">Login</a></li>
+            <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right" ng-if="currentUser">
+            <li class="navbar-text" ng-bind="currentUser.email"></li>
+            <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+          </ul>
     </nav>
 
     <div class="container">
